@@ -33,8 +33,6 @@ function validateSubject(row) {
 
   if (row.marks === "") {
     errors.marks = "Marks are required.";
-  } else if (Number(row.marks) === 0) {
-    errors.marks = "Marks cannot be zero.";
   } else if (Number(row.marks) < 0) {
     errors.marks = "Marks cannot be negative.";
   } else if (Number(row.marks) > 100) {
@@ -408,7 +406,7 @@ function GpaCalculator() {
                         <td className="w-36 px-5 py-4">
                           <input
                             type="number"
-                            min="1"
+                            min="0"
                             max="100"
                             step="1"
                             value={row.marks}
@@ -421,7 +419,7 @@ function GpaCalculator() {
                               )
                             }
                             onBlur={() => touchField(row.id, "marks")}
-                            placeholder="1–100"
+                            placeholder="0–100"
                             aria-label={`Semester ${semester.number}, marks for subject ${index + 1}`}
                             aria-invalid={Boolean(
                               getError(row, "marks", semester.id)
