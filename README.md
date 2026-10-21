@@ -32,7 +32,7 @@ A simple GPA and CGPA calculator built with React and Tailwind CSS. It allows st
 ### 1. Clone the Repository
 
 ```bash
-git clone REPOSITORY_URL
+git clone https://github.com/Ali-hassan1412/Calculate-CGPA
 ```
 
 ### 2. Open the Project Folder
